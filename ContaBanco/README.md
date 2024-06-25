@@ -1,18 +1,31 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Desafio ContaBanco
 
-## Folder Structure
+Neste repositório foi feito um código básico de Java, onde criamos algumas variáveis sem valores atribuídos inicialmente, e utilizamos uma biblioteca chamada Scanner, atráves dessa biblioteca podemos pedir para que o usuário insira seu proprio valor sobre as variáveis consequentemente elas serão preenchidas com valor atribuido, após essa requisição, demonstramos uma imagem com os dados preenchidos pelo usuário!
 
-The workspace contains two folders by default, where:
+## Obstáculos
+Ao tentar exibir a mensagem que deveria para o usuário, não notei que estava cometendo um erro na hora da tentativa de concatenação do código, onde eu estava tentando concatenar uma string com uma variável do tipo double usando o operador +, mas não estava fechando a string corretamente.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+                    
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Correção na Prática
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O código com erro estava assim:
+```java
+System.out.println("Olá! " +nomeCliente ", obrigado por criar uma conta em nosso banco, sua agência é " +agencia ", conta " +numero "e seu saldo é de R$" +saldo " e já está disponível para saque!");
+}
+
+
+```
+E para conseguir resolve tive que mudar o código para:
+```java
+System.out.printf("Olá! %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %s e seu saldo é de R$%.2f e já está disponível para saque!%n", 
+                  nomeCliente, agencia, numero, saldo);
+}
+
+
+```
+
+
