@@ -14,7 +14,8 @@ public class ContaTerminal {
         System.out.println("Insira o número da sua agencia de sua escolha: ");
         String numero = sc.nextLine();
 
-        System.out.println("Olá! " +nomeCliente ", obrigado por criar uma conta em nosso banco, sua agência é " +agencia ", conta " +numero "e seu saldo é de R$" +saldo " e já está disponível para saque!");
+        System.out.printf("Olá! %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %s e seu saldo é de R$%.2f e já está disponível para saque!%n", 
+                  nomeCliente, agencia, numero, saldo);
 
 
         
